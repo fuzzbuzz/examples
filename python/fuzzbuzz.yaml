@@ -1,0 +1,4 @@
+test1:
+  language: python
+  steps:
+    - run: pip install -r requirements.txt --no-index --find-links file://${PWD}/vendor

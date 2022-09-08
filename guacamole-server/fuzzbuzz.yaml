@@ -1,0 +1,14 @@
+guac:
+  language: c
+  clean:
+    - run: make clean
+  steps:
+    - run: autoreconf --install
+    - run: autoconf
+    - run: ./configure --with-pango=no
+    - run: make
+  build_option:
+    pre_command:
+      "*clang*":
+        - arg_filter: -Wnewline-eof
+        - arg_filter: -Werror
