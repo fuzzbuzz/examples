@@ -49,3 +49,4 @@ doc/doxygen-output
 
 # IDE metadata
 nbproject/
+*.profraw
